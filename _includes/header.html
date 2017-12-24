@@ -1,0 +1,24 @@
+<div style="background-color: #eee; width: 100%">
+  <div class="wrapper">
+    <!-- <center><a class="page-link" href="{{site.url}}{{site.baseurl}}"><div class="site-title">   {{site.title}} </div></a></center> -->
+    <center><a class="page-link" href="{{site.url}}"><div class="site-title">   {{site.title}} </div></a></center>
+  </div>
+  <div class="wrapper site-description">
+  <center>  {{site.description}} </center>
+  </div>
+  <div class="wrapper">
+    <div style="margin: 0 auto; align-items: center;" class="trigger site-navigation">
+  <!--     <a class="page-link" href="{{site.url}}{{site.baseurl}}">HOME</a><span class="exclamationMark">/</span> -->
+      <span class="exclamationMark">/</span>
+      {% for sitePage in site.pages %}
+      {% if sitePage.title %}
+
+      <!-- <a class="page-link" href="{{sitePage.url | prepend: site.baseurl }}">{{sitePage.title}}</a><span class="exclamationMark">/</span> -->
+      <a class="page-link" href="{{sitePage.url | prepend: site.url }}">{{sitePage.title}}</a><span class="exclamationMark">/</span>
+      {% endif %}
+      {% endfor %}
+      <img style="height:125px; width:200px; float:left" src="/css/avatar.png" />
+      <img style="height:125px; width: 200px; float:right;" src="/css/avatar1.png" />
+    </div>
+  </div>
+</div>
