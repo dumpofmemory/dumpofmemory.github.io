@@ -83,7 +83,7 @@ or
 
 ```javascript
 var mybutton = document.getElementById('loadbutton');
-mybutton.onclick = loadAJAX; 
+mybutton.onclick = loadAJAX;
 
 function loadAJAX() {
 	var request;
@@ -106,3 +106,4 @@ function loadAJAX() {
 	}
 	request.send();
 } // loadAJAX
+```
