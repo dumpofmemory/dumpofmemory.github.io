@@ -51,7 +51,7 @@ So events can be triggered either as attributes, like we have done right here, a
 <body>
 <button id="loadbutton">Load</button>
 <div id="update"></div>
-<script src="script.js"></script> <!-- here -->
+<script src="script.js"></script>
 </body>
 ```
 
@@ -83,7 +83,7 @@ or
 
 ```javascript
 var mybutton = document.getElementById('loadbutton');
-mybutton.onclick = loadAJAX; 
+mybutton.onclick = loadAJAX;
 
 function loadAJAX() {
 	var request;
