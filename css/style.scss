@@ -188,6 +188,9 @@ a {
     }
 }
 
+a {
+  color: #eb3979;
+}
 
 
 /**
@@ -214,9 +217,10 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+    // border: 1px solid $grey-color-light;
+    // border-radius: 3px;
+    border: none;
+    background-color: #efd5ae;
 }
 
 code {
