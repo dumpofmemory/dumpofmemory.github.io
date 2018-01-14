@@ -159,6 +159,20 @@ That means, on first run, it is unaffected by code which appears further down in
 These functions are great for quickly populating a variable or argument in a larger function or a property in an object, and are often hooked to event listeners for an immediate output.
 
 However, when you use these, you need to be very careful about how you structure your script, because as you see, they are invoked immediately, they don't wait for you to call <code>theBiggest</code> variable, they just run as soon as the browser encounters them.
-<br>
+
+
 ---
-<br>
+
+# Variable scope
+
+When we start working with functions, it's important to understand the concept of variable scope, where in your code your variable is available. In JavaScript, the location of your variable declaration decides where it can be used in your code. There are two types of variable scopes, global and local. When you declare a variable in the root of your script, so, independently, outside of any function, it becomes a global variable you can access from anywhere within the script. That means you can use it, update its value, do whatever you want with it in both the root of the script and inside functions.
+
+If you make it change to that variable inside a function, that change becomes global and all other references to it will receive the same updated value. When you declare a variable inside a function, it becomes a local variable. This variable is only available as long as you're inside a function, so, inside its scope, and if you try to call it from outside the function, you get an error. Let's see how this works in practice using the example we've been working with.
+
+Right now, the first fraction and second fraction variables are defined in the root of the script, so, they have a global scope. That means I can access them from the root of the script and inside any function, so, if I console log their values from inside the function, it works. Result, on the other hand, is defined inside the function and is a locally scoped variable. That means it is available only inside the function and if I try to console log it outside, I get an Uncaught ReferenceError, result is not defined.
+
+A large percentage of JavaScript errors is caused by losing track of the scope of variables. Most commonly, the developer tries to call a local variable outside its scope and things run awry. This is one reason why we have the return keyword so we can package up a local value and send it somewhere outside the local scope. Now that you understand how scopes work, you may be tempted to just make all variables global. Don't. That makes variables far less useful.
+
+**The great thing about local variables is they are proverbial scribble pads. They exist only for as long as the function runs and are then discarded by the browser and their names are not reserved globally so you can use them again and again. This will come in handy later when we start working with loops. Unlike global variables, which are stored in the browser memory for as long as the script runs, local variables don't take up valuable resources. They are used then discarded when we leave the scope.**
+
+**There's one weird quirk here. Remember when we first talked about variables, I said, if you declare a new variable without the var prefix, the browser will create a new variable for you? Well, that variable becomes a global variable even if you declare it inside a function. This can cause all sorts of confusion and is very bad practice. So, for scope control alone, you should always declare your variables using the var prefix.**
