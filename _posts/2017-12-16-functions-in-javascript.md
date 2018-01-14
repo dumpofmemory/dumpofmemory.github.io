@@ -42,6 +42,8 @@ var secondFraction = 5/7;
 findBiggestFraction(firstFraction,secondFraction);
 ```
 
+---
+
 # Add arguments to the function
 
 ```javascript
@@ -56,6 +58,8 @@ findBiggestFraction(firstFraction, secondFraction);
 findBiggestFraction(7/16, secondFraction13/25);
 findBiggestFraction(1/3, 1/2);
 ```
+
+---
 
 # Return values from a function
 
@@ -77,6 +81,8 @@ console.log("first fraction result: ", firstFraction);
 console.log("second fraction result: ", secondFraction);
 console.log("fraction " + fractionResult[0] + " with a value of " + fractionResult[1] + " is the biggest!");
 ```
+---
+
 
 # Anonymous functions
 
