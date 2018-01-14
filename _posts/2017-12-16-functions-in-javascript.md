@@ -113,3 +113,52 @@ var theBiggest = function(a,b) {
 
 console.log(theBiggest());
 ```
+<br>
+---
+<br>
+# Immediately invoked functional expressions
+
+How do I populate the variable with the result of an anonymous function? - use an **immediately invoked function expression** that runs as soon as the browser encounters it.
+
+Here's what that looks like. First, we wrap our entire anonymous function in parenthesis. Then, we invoke the function by adding a set of parenthesis at the end. And we need to place arguments inside this new set of parenthesis. So I'll cut them out, and paste them in here.
+
+Now when the script is read from the top down, the browser says, "Hey, here is a variable, "and inside the variable we have an "immediately invoked function expression, "so I'm going to run the function right now, "with these arguments, and return "the result back into the variable." That means, now we can console log out just <code>theBiggest</code>, and get the result.
+
+```javascript
+var theBiggest = (function(a,b) {
+    var result;
+    a>b ? result = ["a", a] : result = ["b", b];
+    return result;
+})(7/9,13/25)
+
+console.log(theBiggest);
+```
+
+
+The browser runs the function when it's encountered, so you'll remember previously when we made our named function, we placed it at the top, and then we called the function later on after we defined the variables? Well now, if we want to use external variables, those variables have to be defined before we list out our immediately invoked function expression.
+
+```javascript
+var firstFraction = 7/9;
+var secondFraction = 13/25;
+
+var theBiggest = (function(a,b) {
+    var result;
+    a>b ? result = ["a", a] : result = ["b", b];
+    return result;
+})(firstFraction, secondFraction)
+
+console.log(theBiggest);
+```
+
+
+So why would you want to use an immediately invoked function expression?
+
+The benefit of this function is that it runs immediately where it's located in the code, and produces a direct output.
+
+That means, on first run, it is unaffected by code which appears further down in the script, which can be useful.
+These functions are great for quickly populating a variable or argument in a larger function or a property in an object, and are often hooked to event listeners for an immediate output.
+
+However, when you use these, you need to be very careful about how you structure your script, because as you see, they are invoked immediately, they don't wait for you to call <code>theBiggest</code> variable, they just run as soon as the browser encounters them.
+<br>
+---
+<br>
