@@ -80,8 +80,8 @@ console.log("fraction " + fractionResult[0] + " with a value of " + fractionResu
 
 # Anonymous functions
 
-Here, my anonymous function is placed inside a variable as a function expression, meaning it is stored as if it were a normal value and only executes if we call the variable as if it were a function.
-So, to get this function to run, I have to call the variable, theBiggest and add a parentheses at the end of it. This tells JavaScript, hey, inside theBiggest variable, there's an anonymous function. Can you please run that anonymous function and then we should get the console log result out in the console.
+Here, my anonymous function is placed inside a variable as a _function expression_, meaning it is stored as if it were a normal value and only executes if we call the variable as if it were a function.
+So, to get this function to run, I have to call the variable, <code>theBiggest</code> and add a <code>()</code> at the end of it. This tells JavaScript, that inside <code>theBiggest</code> variable, there's an anonymous function, and to run that anonymous function; and then we should get the console log result out in the console.
 
 ```javascript
 var theBiggest = function(a,b) {
