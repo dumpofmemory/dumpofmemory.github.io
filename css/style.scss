@@ -578,12 +578,19 @@ pre {
   margin-bottom: $spacing-unit;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+// @import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+// @import url('https://fonts.googleapis.com/css?family=Roboto');
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 .post-title {
   font-size: 48px;
   text-align: center;
   // font-family: "PT Sans";
-  font-family: 'Quicksand', sans-serif;
+  // font-family: 'Quicksand', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  // font-family: 'Roboto', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
   font-weight: 900;
   @include media-query($on-laptop) {
     font-size: 36px;
