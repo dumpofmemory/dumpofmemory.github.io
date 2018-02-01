@@ -577,11 +577,13 @@ pre {
 .post-header {
   margin-bottom: $spacing-unit;
 }
-.post-title {
-  font-size: 62px;
 
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+.post-title {
+  font-size: 48px;
   text-align: center;
-  font-family: "PT Sans";
+  // font-family: "PT Sans";
+  font-family: 'Quicksand', sans-serif;
   font-weight: 900;
   @include media-query($on-laptop) {
     font-size: 36px;
