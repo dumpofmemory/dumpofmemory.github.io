@@ -5,7 +5,7 @@ categories: freeCodeCamp
 ---
 Check if the predicate (second argument) is truthy on all elements of a collection (first argument).
 
-Remember, you can access object properties through either dot notation or [] notation.
+Remember, you can access object properties through either <code>dot notation</code> or <code>[] notation</code>.
 
 > A truthy value is a value that translates to true when evaluated in a Boolean context.
 
