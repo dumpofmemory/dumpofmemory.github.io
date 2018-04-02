@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Validate US Phone Numbers
+title: Everything Be True
 categories: freeCodeCamp
 ---
 Check if the predicate (second argument) is truthy on all elements of a collection (first argument).
