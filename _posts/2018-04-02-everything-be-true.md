@@ -3,7 +3,7 @@ layout: post
 title: Everything Be True
 categories: freeCodeCamp
 ---
-Check if the predicate (second argument) is truthy on all elements of a collection (first argument).
+Check if the predicate (second argument) is <code>truthy</code> on all elements of a collection (first argument).
 
 Remember, you can access object properties through either <code>dot notation</code> or <code>[] notation</code>.
 
