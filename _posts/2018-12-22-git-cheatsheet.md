@@ -35,11 +35,11 @@
 
 <code>$ git checkout -- LICENSE</code> blow away all changes since last commit
 
-## SKIP STAGING AND COMMIT
+## Skip Staging and Commit
 
 <code>$ git commit -a -m "Modify readme"</code> Add changes from all tracked files. Doesn’t add new (untracked) files
 
-## UNDOING A COMMIT
+## Undoing a Commit
 
 Whoops, we forgot something on that commit.
 
@@ -51,7 +51,7 @@ Whoops, we forgot something on that commit.
 
 Now I can make changes, and re-commit
 
-## ADDING TO A COMMIT
+## Adding to a Commit
 
 Maybe we forgot to add a file
 
@@ -61,7 +61,7 @@ Maybe we forgot to add a file
 
 Whatever has been staged is added to last commit
 
-## USEFUL COMMANDS
+## Useful Commands
 
 <code>$ git reset --soft HEAD^</code> Undo last commit, put changes into staging
 
@@ -71,7 +71,7 @@ Whatever has been staged is added to last commit
 
 <code>$ git reset --hard HEAD^^</code> Undo last 2 commits and all changes
 
-## ADDING A REMOTE
+## Adding a Remote 
 
 <code>$ git remote add origin https://github.com/Gregg/git-real.git</code>
 
@@ -81,7 +81,7 @@ Whatever has been staged is added to last commit
 
 <code>$ git remote -v</code> show remote repositories
 
-## PUSHING TO REMOTE
+## Pushing to a Remote 
 
 <code>$ git push -u origin master</code> 
 
@@ -91,11 +91,11 @@ Whatever has been staged is added to last commit
 
 Password caching -> https://help.github.com/articles/set-up-git/#
 
-## PULLING FROM REMOTE
+## Pulling From a Remote
 
 To pull changes down from the remote (its good to do this often) <code>$ git pull</code>
 
-## WORKING WITH REMOTES
+## Working with Remotes
 
 To add new remotes <code>$ git remote add 'name' 'address'</code>
 
@@ -103,9 +103,9 @@ To remove remotes <code>$ git remote rm 'name'</code>
 
 To push to remotes <code>$ git push -u 'name' 'branch'</code>
 
-*branch* - usually master
+**branch** - usually master
 
-### USEFUL COMMANDS **[Don’t do these after you push]**
+### Useful Commands **[Don’t do these after you push]**
 
 <code>$ git reset --soft HEAD^</code>
 
@@ -115,5 +115,5 @@ To push to remotes <code>$ git push -u 'name' 'branch'</code>
 
 <code>$ git reset --hard HEAD^^</code>
 
-## CLONNING & BRANCHING
+## Cloning and Branching
 
