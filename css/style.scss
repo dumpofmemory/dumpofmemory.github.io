@@ -295,7 +295,7 @@ pre {
 }
 
 .post {
-  // font-family: "Source Sans Pro";
+  /* font-family: "Source Sans Pro"; */
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 300;
@@ -345,13 +345,15 @@ pre {
   text-indent: 2px;
 }
 .postContent {
+  font-family: 'Roboto', sans-serif;
   padding-top: 3.5em;
   text-align: center;
 }
 .postDate {
   float: left;
   text-transform: uppercase;
-  font-family: "Source Sans Pro";
+  /*font-family: "Source Sans Pro";*/
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 2px;
@@ -361,7 +363,8 @@ pre {
   float: right;
 }
 .postTitle {
-  font-weight: 400;
+  font: 400 18px/1.5 "PT Sans",Helvetica,Arial,sans-serif;
+  /*font-weight: 400;*/
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -409,7 +412,7 @@ pre {
   font-size: 14px;
   letter-spacing: 2px;
   text-indent: 6px;
-  font-family: 'Josefin Sans';
+  font: 400 15px/1.5 "PT Sans",Helvetica,Arial,sans-serif;
   font-weight: 300;
   padding-top: 2em;
 
