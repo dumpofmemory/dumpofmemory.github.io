@@ -117,3 +117,20 @@ To push to remotes <code>$ git push -u 'name' 'branch'</code>
 
 ## Cloning and Branching
 
+To clone a repository <code>$ git clone https://url.com/repo/project.git</code>
+
+It will create a local directory with that repository. It will be called the name that the repository was called. If you want to change that name to something else, you can say the same as above and pass in the desirable name:
+
+<code>$ git clone https://url.com/repo/project.git **'myproject'**</code>
+
+## Git Clone
+
+1. The first thing git clone does is download the repository.
+
+2. The second thing is does is create a remote called *origin* and point it to the URL we passed it to.
+
+We can check that by simply running <code>$ git remote -v</code> and it would list all the remotes, so you will see origin and then the URL that we passed it to.
+
+3. And finally it will check out the initial branch, likely master, and set the branch right there and set the HEAD.   
+---
+1 - Downloads the entire repository into a new git-real directory.
