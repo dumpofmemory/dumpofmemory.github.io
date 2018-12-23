@@ -83,11 +83,11 @@ Whatever has been staged is added to last commit
 
 ## Pushing to a Remote 
 
-<code>$ git push -u origin master</code> 
+<code>$ git push -u origin *master*</code> 
 
 **origin** - remote repository name 
 
-**master** - local branch to push 
+***master*** - local branch to push 
 
 Password caching -> https://help.github.com/articles/set-up-git/#
 
@@ -103,7 +103,7 @@ To remove remotes <code>$ git remote rm 'name'</code>
 
 To push to remotes <code>$ git push -u 'name' 'branch'</code>
 
-**branch** - usually master
+**branch** - usually *master*
 
 ### Useful Commands **[Don’t do these after you push]**
 
@@ -123,14 +123,68 @@ It will create a local directory with that repository. It will be called the nam
 
 <code>$ git clone https://url.com/repo/project.git **'myproject'**</code>
 
-## Git Clone
+### Git Clone
 
 1. The first thing git clone does is download the repository.
 
-2. The second thing is does is create a remote called *origin* and point it to the URL we passed it to.
+2. Adds the ‘origin’ remote, pointing it to the clone URL.
+
+The second thing is does is create a remote called *origin* and point it to the URL we passed it to.
 
 We can check that by simply running <code>$ git remote -v</code> and it would list all the remotes, so you will see origin and then the URL that we passed it to.
 
-3. And finally it will check out the initial branch, likely master, and set the branch right there and set the HEAD.   
----
-1 - Downloads the entire repository into a new git-real directory.
+<code>$ git remote -v</code>
+<code>
+origin https://github.com/codeschool/git-real.git (fetch)
+origin https://github.com/codeschool/git-real.git (push)
+<code>
+
+3. And finally it will check out the initial branch, likely *master*, and set the branch right there and set the HEAD.  
+
+### Branching Out
+
+Need to work on a feature that will take some time?
+Time to branch out.
+
+branch created from *master*:
+<code>$ git branch cat</code>
+
+But if we check with <code>$ git branch</code>, we can see we're still on the *master* branch (HEAD still on *master*). 
+
+<code>
+cat
+* *master*
+</code>
+
+### Switching to a Branch
+
+To move to the cat branch, we're going to need to <code>$ git checkout cat</code>
+
+When we're doing that, what we're actually doing is switching timelines. 
+
+We're not in the **master** timeline anymore. We're in a different timeline. 
+
+We can do whatever we want and then move back onto *master* whenever we need to. 
+
+We're going to run this command right here, and what it does is create a cat. txt file and inside of it put the word Schrödinger: 
+<code>$ echo "Schrödinger" > cat.txt</code>
+
+Then we're going to add it to the stage,
+<code>$ git add cat.txt</code>
+
+commit it, 
+<code>$ git commit -m "Create quantum cat."</code> 
+
+and this commit will be added to our cat timeline, not to our *master* branch, but to our cat branch. 
+
+### Working on a Branch
+
+If we run the <code> ls</code> command to list all the files in the current directory, you will see that we have the *README. txt* file and this *cat. txt* file we just created. 
+
+Now if we move back to *master* using git checkout *master* and do the same command, we can't see any *cat. txt file.* It's not there. It does not exist in this timeline. Now, if we run <code>$ git log</code>, same thing. No commit. That create quantum cat commit is not there. Just to make sure we're not crazy, if we move back to the cat branch and do the ls command again, the *cat. txt* file is still there. We're not crazy. So let's assume we're done with that feature branch now, the cat branch. We're going to go back to *master*, <code>$ git checkout *master*</code>, and now it's time to merge those two timelines. It sounds really fancy, but it's actually quite easy. <code>$ git merge cat</code>. Now that we're on *master*, Git will merge the cat branch into it, and it will tell us that it **fast-forwarded**. What does that mean? So when we create a branch and make one commit or several, and we do nothing on the other branch, it's very easy for Git to merge the *cat* branch back into *master* because nothing was modified on *master* in the meantime. And now that we're done, we can safely delete the cat branch by running <code>$ git branch -d cat</code>, and git will show us that it actually did that.
+
+
+
+
+
+
