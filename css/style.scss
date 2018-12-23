@@ -345,9 +345,9 @@ pre {
   text-indent: 2px;
 }
 .postContent {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  line-height: 1.7;
+  /*font-family: 'Roboto', sans-serif;
+  font-weight: 300;*/
+  /*line-height: 1.7;*/
   padding-top: 3.5em;
   text-align: center;
 }
@@ -608,8 +608,10 @@ pre {
   p {
     // font-size: 1.5rem;
     // font-size: 1.3rem;
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    font-weight: 400;
     // text-align: justify;
   }
   h2 {
