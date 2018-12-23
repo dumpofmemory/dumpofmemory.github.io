@@ -166,14 +166,17 @@ a {
       }
     }
     &.postLink{
-      color: black !important;
+      color: #fff !important;
+      background-color: #333;
       &:hover {
-
-          border-bottom: 1px dotted black ;
+          cursor: pointer;
+          color: #fff;
+          /*border-bottom: 1px dotted black ;*/
       }
 
       &:visited {
-          color: "crimson" !important;
+          //color: "crimson" !important;
+          color: " #7719AA" !important;
       }
     }
     &.post-title-link{
@@ -184,7 +187,8 @@ a {
       }
 
       &:visited {
-          color: "crimson" !important;
+          // color: "crimson" !important;
+          color: " #7719AA" !important;
       }
     }
 }
@@ -590,6 +594,7 @@ pre {
 // @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 .post-title {
+  margin-top: 30px;
   font-size: 48px;
   text-align: center;
   // font-family: "PT Sans";
@@ -597,7 +602,7 @@ pre {
   // font-family: 'Raleway', sans-serif;
   // font-family: 'Open Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   @include media-query($on-laptop) {
     font-size: 36px;
   }
@@ -609,9 +614,9 @@ pre {
     // font-size: 1.5rem;
     // font-size: 1.3rem;
     // font-family: 'Open Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 400;*/
     // text-align: justify;
   }
   h2 {
