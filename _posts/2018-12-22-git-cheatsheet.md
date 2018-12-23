@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Git Cheatsheet (source: codeschool.com)
+title: "Git Cheatsheet (source: codeschool.com)"
 categories: javascript
 ---
 
