@@ -1,3 +1,9 @@
+---
+layout: post
+title: Git Cheatsheet (source: codeschool.com)
+categories: javascript
+---
+
 # Terminal Commands
 
 - **touch** 'filename' - creates a new file
@@ -181,7 +187,29 @@ and this commit will be added to our cat timeline, not to our *master* branch, b
 
 If we run the <code> ls</code> command to list all the files in the current directory, you will see that we have the *README. txt* file and this *cat. txt* file we just created. 
 
-Now if we move back to *master* using git checkout *master* and do the same command, we can't see any *cat. txt file.* It's not there. It does not exist in this timeline. Now, if we run <code>$ git log</code>, same thing. No commit. That create quantum cat commit is not there. Just to make sure we're not crazy, if we move back to the cat branch and do the ls command again, the *cat. txt* file is still there. We're not crazy. So let's assume we're done with that feature branch now, the cat branch. We're going to go back to *master*, <code>$ git checkout *master*</code>, and now it's time to merge those two timelines. It sounds really fancy, but it's actually quite easy. <code>$ git merge cat</code>. Now that we're on *master*, Git will merge the cat branch into it, and it will tell us that it **fast-forwarded**. What does that mean? So when we create a branch and make one commit or several, and we do nothing on the other branch, it's very easy for Git to merge the *cat* branch back into *master* because nothing was modified on *master* in the meantime. And now that we're done, we can safely delete the cat branch by running <code>$ git branch -d cat</code>, and git will show us that it actually did that.
+Now if we move back to *master* using git checkout *master* and do the same command, we can't see any *cat. txt file.* It's not there. 
+
+It does not exist in this timeline. 
+
+Now, if we run <code>$ git log</code>, same thing. No commit. That create quantum cat commit is not there. Just to make sure we're not crazy, if we move back to the cat branch and do the ls command again, the *cat. txt* file is still there. We're not crazy. 
+
+So let's assume we're done with that feature branch now, the cat branch. 
+
+We're going to go back to *master*, 
+<code>$ git checkout *master*</code> 
+
+and now it's time to merge those two timelines. 
+<code>$ git merge cat</code>. 
+
+Now that we're on *master*, Git will merge the cat branch into it, and it will tell us that it **fast-forwarded**. 
+
+What does that mean? 
+
+So when we create a branch and make one commit or several, and we do nothing on the other branch, it's very easy for Git to merge the *cat* branch back into *master* because nothing was modified on *master* in the meantime. 
+
+And now that we're done, we can safely delete the cat branch by running 
+
+<code>$ git branch -d cat</code>
 
 
 
