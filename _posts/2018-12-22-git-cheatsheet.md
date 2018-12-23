@@ -430,9 +430,11 @@ If you remember those commit SHAs that we saw in the log, you can use those, as 
 ## Untracking Files
 
 what if you’re already tracking log files?
+
 <code>$ git rm --cached development.log</code>
 
 <code>$ git status</code>
+
 Changes to be committed:
 
 deleted: development.log
