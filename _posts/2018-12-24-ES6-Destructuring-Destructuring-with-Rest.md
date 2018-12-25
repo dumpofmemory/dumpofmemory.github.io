@@ -19,7 +19,7 @@ Variables <code>a</code> and <code>b</code> take the first and second values fro
 The <code>rest</code> element only works correctly as the last variable in the list. As in, you cannot use the <code>rest</code> operator to catch a subarray that leaves out last element of the original array.
 
 ## Task
-Use destructuring assignment with the rest operator to perform an effective Array.prototype.slice() so that arr is a sub-array of the original array source with the first two elements omitted.
+Use destructuring assignment with the rest operator to perform an effective <code>Array.prototype.slice()</code> so that arr is a sub-array of the original array source with the first two elements omitted.
 
 ```js
 const source = [1,2,3,4,5,6,7,8,9,10];
@@ -47,7 +47,7 @@ const source = [1,2,3,4,5,6,7,8,9,10];
 function removeFirstTwo(list) {
   "use strict";
   // change code below this line
-  const [a, b, ...arr] = list ; // change this
+  const [a, b, ...arr] = list ;
   // change code above this line
   return arr;
 }
