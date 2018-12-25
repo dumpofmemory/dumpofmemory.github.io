@@ -4,7 +4,6 @@ title: ES6 Use Destructuring Assignment with the Rest Operator to Reassign Array
 categories: freeCodeCamp
 ---
 
-## Theory
 In some situations involving *array destructuring*, we might want to collect the rest of the elements into a separate array.
 
 The result is similar to <code>Array.prototype.slice()</code>, as shown below:

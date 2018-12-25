@@ -5,7 +5,7 @@ categories: freeCodeCamp
 ---
 
 
-## Theory
+
 
 
 Check out this code:
