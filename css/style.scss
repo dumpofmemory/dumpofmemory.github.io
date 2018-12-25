@@ -374,7 +374,8 @@ pre {
     /*font-family: 'Roboto', sans-serif;
   font-weight: 300;*/
     /*line-height: 1.7;*/
-    padding-top: 3.5em;
+    margin-top: 1.5em;
+    padding: 2em 2em 0.5em 2em;
     text-align: center;
 }
 
@@ -400,8 +401,14 @@ pre {
     text-transform: uppercase;
     letter-spacing: 3px;
     text-indent: 3px;
+    // padding-top: 10px;
+    // padding-bottom: 5px;
+    padding: 15px 20px 10px 20px;;
 }
 
+.postExt {
+    padding: .2em 2em .2em 2em;
+}
 
 /**
  * Site header
