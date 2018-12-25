@@ -1,6 +1,7 @@
 --- 
 # Only the main Sass file needs front matter (the dashes are enough) 
 --- 
+
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 // Our variables
@@ -160,6 +161,9 @@ h6 {
     font-weight: $base-font-weight;
 }
 
+h2, h3{
+    margin-top: 35px; 
+}
 
 /**
  * Links
@@ -206,7 +210,7 @@ a {
     }
 }
 
-a {
+a, h3 {
     color: #eb3979;
 }
 
@@ -665,15 +669,6 @@ pre {
 .post-content {
     margin-bottom: $spacing-unit;
     padding-bottom: 3em !important;
-    p {
-        // font-size: 1.5rem;
-        // font-size: 1.3rem;
-        // font-family: 'Open Sans', sans-serif;
-        /*font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 400;*/
-        // text-align: justify;
-    }
     h2 {
         font-size: 32px;
         @include media-query($on-laptop) {

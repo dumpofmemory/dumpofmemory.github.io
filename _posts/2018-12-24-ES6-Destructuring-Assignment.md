@@ -81,4 +81,4 @@ console.log(getTempOfTmrw(AVG_TEMPERATURES)); // should be 79
 ```
 
 ### Notes
-Actually, when I was writing this line <code> const {tomorrow: tempOfTomorrow} = avgTemperatures;</code> intially I did not pay attention and used <code>AVG_TEMPERATURES</code> instead of <code>avgTemperatures</code>, and due to that I could not fulfil the " ‘Destructuring **with** reassignment was used’" condition.  
+Actually, when I was writing this line <code> const {tomorrow: tempOfTomorrow} = avgTemperatures;</code> intially I did not pay attention and used <code>AVG_TEMPERATURES</code> instead of <code>avgTemperatures</code>, and due to that I could not fulfil the "Destructuring **with** reassignment was used" condition at first.  
