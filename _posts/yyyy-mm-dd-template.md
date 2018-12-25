@@ -4,11 +4,6 @@ title: topic
 categories: freeCodeCamp
 ---
 
----
-layout: post
-title: ES6 Use Destructuring Assignment to Pass an Object as a Function's Parameters
-categories: freeCodeCamp
----
 
 ## Theory
 
