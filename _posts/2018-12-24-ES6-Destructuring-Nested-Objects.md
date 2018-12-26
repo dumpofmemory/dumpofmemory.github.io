@@ -4,7 +4,6 @@ title: ES6 Use Destructuring Assignment to Assign Variables from Nested Objects
 categories: freeCodeCamp
 ---
 
-## Theory
 We can similarly destructure nested objects into variables.
 
 Consider the following code:
