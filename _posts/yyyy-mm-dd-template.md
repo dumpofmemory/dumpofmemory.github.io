@@ -9,7 +9,7 @@ categories: freeCodeCamp
 
 
 Check out this code:
-```js
+```javascript
 
 ```
 
@@ -19,7 +19,7 @@ Check out this code:
 ## Task
 
 
-```js
+```javascript
 
 
 ```
@@ -30,7 +30,6 @@ Check out this code:
 
 ## Solution
 ```javascript
-
 
 ```
 

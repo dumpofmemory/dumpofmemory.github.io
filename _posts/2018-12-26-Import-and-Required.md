@@ -58,6 +58,8 @@ capitalizeString("hello!");
 
 ### Notes
 
+---
+
 # ES6: Use * to Import Everything from a File
 
 Suppose you have a file that you wish to import all of its contents into the current file. This can be done with the *import* syntax.
