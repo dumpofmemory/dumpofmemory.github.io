@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Basic Data Structures] Modify an Object Nested Within an Object
+title: Basic Data Structures Modify an Object Nested Within an Object
 categories: freeCodeCamp
 ---
 

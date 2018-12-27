@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Basic Data Structures] Create complex multi-dimensional arrays
+title: Basic Data Structures Create complex multi-dimensional arrays
 categories: freeCodeCamp
 ---
 

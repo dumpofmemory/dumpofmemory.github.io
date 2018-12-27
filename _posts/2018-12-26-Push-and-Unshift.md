@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Basic Data Structures: Add Items to an Array with push() and unshift()
+title: Basic Data Structures Add Items to an Array with push() and unshift()
 categories: freeCodeCamp
 ---
 
