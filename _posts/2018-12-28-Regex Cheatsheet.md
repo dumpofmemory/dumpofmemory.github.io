@@ -4,9 +4,9 @@ title: Regex Cheatsheet
 categories: javascript
 ---
 
-- Use <code> + </code> to look for **one or more** characters
+- Use <code> +</code> to look for **one or more** characters
 - Use <code> * </code> to look for **zero or more** characters.
-- You can search the **end of strings** using the <code> $ </code> character at the end of the regex.
+- You can search the **end of strings** using the <code> $</code> character at the end of the regex.
 ```javascript
 let theEnding = "This is a never ending story";
 let storyRegex = /story$/;
@@ -17,7 +17,7 @@ storyRegex.test(noEnding);
 // Returns false
 ```
 
-- Start of String or Line: <code> ^ </code> By default, the <code> ^ </code> anchor specifies that the following pattern must begin at the first character position of the string.
+- **Start of String or Line** <code> ^</code> By default, the <code> ^</code> anchor specifies that the following pattern must begin at the first character position of the string.
 - The closest character class in JavaScript to match the **alphabet** is <code>\w</code>.
 
 This shortcut is equal to <code>[A-Za-z0-9_]</code>. This character class matches upper and lowercase letters plus numbers. Note, this character class also includes the underscore character (<code> _ </code>).
@@ -38,9 +38,9 @@ Use the shorthand character class
 
 These shortcut character classes are also known as <code>shorthand character classes</code>.
 
-- You can search for the opposite of the <code>\w</code> (non-alphanumerics) with <code>\W</code>. This shortcut is the same as <code>[^A-Za-z0-9_]</code>.
+- You can search for the opposite of the <code>\w</code> (**non-alphanumerics**) with <code>\W</code>. This shortcut is the same as <code>[^A-Za-z0-9_]</code>.
 
-- The shortcut to look for digit characters is <code>\d</code>. This is equal to the character class <code>[0-9]</code>, which looks for a single character of any number between zero and nine.
+- The shortcut to look for **digit characters** is <code>\d</code>. This is equal to the character class <code>[0-9]</code>, which looks for a single character of any number between zero and nine.
 
 - **Non-digit characters** is <code>\D</code>. This is equal to the character class <code>[^0-9]</code>.
 
@@ -56,11 +56,11 @@ let ohRegex = /Oh{3,6}\s.*/; // match only 3 to 6 letter h's in the word "Oh no"
 let result = ohRegex.test(ohStr);
 ```
 
-- To only specify the lower number of patterns, keep the first number followed by a comma, like <code>/a{3,}/</code>.
-- Use the <code> caret ^ </code character inside a <code> character set </code> to create a <code> negated character set </code> in the form <code> [^thingsThatWillNotBeMatched] </code>.
-- Outside of a <code>character set</code>, the <code> ^ </code> is used to search for patterns at the beginning of strings. These are called <code>quantity specifiers</code>. You put two numbers between the curly brackets - for the lower and upper number of patterns.
+To only specify the lower number of patterns, keep the first number followed by a comma, like <code>/a{3,}/</code>.
+- Use the <code> caret ^</code> character inside a <code> character set</code> to create a **negated character set** in the form<code> [^thingsThatWillNotBeMatched]</code>.
+- Outside of a <code>character set</code>, the <code> ^</code> is used to **search for patterns at the beginning of strings**. These are called <code>quantity specifiers</code>. You put two numbers between the curly brackets - for the lower and upper number of patterns.
 
-For example, to match only the letter <code>a</code> appearing between <code> 3 </code> and <code> 5 </code> times in the string <code>"ah"</code>, your regex would be <code> /a{3,5}h/ </code>.
+For example, to match only the letter <code>a</code> appearing between <code> 3</code> and <code> 5</code> times in the string <code>"ah"</code>, your regex would be <code> /a{3,5}h/</code>.
 
 Change the regex haRegex to match the word "Hazzah" only when it has four or more letter z's.
 ```javascript
@@ -69,11 +69,11 @@ let haRegex = /Haz{4,}.*/; // Change this line
 let result = haRegex.test(haStr);
 ```
 - If you want **only a specific number of pattern matches**, just have that one number between the curly brackets.
-For example, to match only the word "hah" with the letter <code> a </code> <code> 3 </code> times, your regex would be <code> /ha{3}h/ </code>
+For example, to match only the word "hah" with the letter <code> a </code> <code> 3</code> times, your regex would be <code> /ha{3}h/</code>
 
 - Sometimes the patterns you want to search for may have parts of it that may or may not exist. However, it may be important to check for them nonetheless.
 
-You can **specify the possible existence of an element** with a <code> ? </code>. This checks for zero or one of the preceding element. You can think of this symbol as saying the previous element is optional.
+You can **specify the possible existence of an element** with a <code> ?</code>. This checks for zero or one of the preceding element. You can think of this symbol as saying the previous element is optional.
 
 ```javascript
 let american = "color";
@@ -107,9 +107,10 @@ let checkPass = /(?=\w{3,6})(?=\D*\d)/;
 checkPass.test(password); // Returns true
 ```
 
-- To search for repeat substrings using capture groups <code> ( ) </code> You put the regex of the pattern that will repeat in between the parentheses.
 
-To specify where that repeat string will appear, you use a backslash <code> \ <code> and then a number. This number starts at 1 and increases with each additional capture group you use. An example would be <code> \1 </code> to match the first group.
+- To search for **repeat substrings** using capture groups <code> ( ) </code> You put the regex of the pattern that will repeat in between the parentheses.
+
+**To specify where that repeat string will appear**, you use a backslash <code> \ </code> and then a number. This number starts at 1 and increases with each additional capture group you use. An example would be <code> \1 </code> to match the first group.
 
 The example below matches any word that occurs twice separated by a space:
 ```javascript
@@ -140,10 +141,10 @@ You can also access capture groups in the replacement string with dollar signs (
 Note
 The <code> .trim() </code> method would work here, but you'll need to complete this challenge using regular expressions.
 
-
-- Replace whitespace:
 ```javascript
 let hello = "   Hello, World!  ";
 let wsRegex = /^(\s*)|(\s*$)/g; // Change this line
 let result = hello.replace(wsRegex, ''); // Change this line
 ```
+
+- https://regex101.com/
