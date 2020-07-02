@@ -22,3 +22,5 @@ kramdown:
 # highlighter: rouge
 # highlighter: none
 
+
+theme: jekyll-theme-cayman
