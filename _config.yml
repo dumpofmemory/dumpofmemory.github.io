@@ -11,7 +11,7 @@ email:
 description: I am just learning... 
 # baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://dumpofmemory.github.io" # the base hostname & protocol for your site
-twitter_username: enter_the_v0id
+twitter_username: cosmvs
 github_username:  dumpofmemory
 
 # Build settings
@@ -21,6 +21,3 @@ kramdown:
       disable : true
 # highlighter: rouge
 # highlighter: none
-
-
-theme: jekyll-theme-cayman
