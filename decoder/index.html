@@ -8,21 +8,24 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-
-<>
-  <button type="button" id="base64">Base64 Decoder</button>
-  <button type="button" id="hex">Hex &lt;base16&gt; Decoder</button>
-  <textarea id="target" name="target" rows="8" cols="80"></textarea>
-
   <div class="container">
 
+    <textarea id="target" name="target" rows="8" cols="80"></textarea>
+    <button type="button" id="base64">Base64 Decoder</button>
+    <button type="button" id="hex">Hex &lt;base16&gt; Decoder</button>
+
+
     <h2>Decoded:</h2>
-    <div class="container">
-      <h3>UTF-8</h3>
-      <div id="box1"></div>
+    <div class="boxes">
+      <div id="box1">
+        <h3>UTF-8</h3>
+        <div></div>
+      </div>
       
-      <h3>ASCII</h3>
-      <div id="box2"></div>
+      <div id="box2">
+        <h3>ASCII</h3>
+        <div></div>
+      </div>
     </div>
   </div>
 
