@@ -1,17 +1,19 @@
 let textarea = document.querySelector('textarea');
-let box1 = document.querySelector('#box1');
+let box1 = document.querySelector('#box1 > div');
 let container = document.querySelector('.container');
-let box2 = document.querySelector('#box2');
+let boxes = document.querySelector('.boxes');
+let box2 = document.querySelector('#box2 > div');
 let h3 = document.querySelectorAll('h3');
 let base64Button = document.getElementById('base64');
 let hexButton = document.getElementById('hex');
-
-box1.innerText = '';
-box2.innerText = '';
+let textareaContents = '';
+box1.innerText = 'Nothing to decode...';
+box2.innerText = 'Nothing to decode...';
 
 function clearAllFields() {
-  box1.innerText = '';
-  textarea.value = '';
+  textareaContents = '';
+  box1.innerText = 'Nothing to decode...';
+  box2.innerText = 'Nothing to decode...';
 }
 
 function b64DecodeUnicode(str) {
@@ -76,7 +78,7 @@ function urlBase64Decode(str) { // From https://jwt.io/js/jwt.js
     return decodeURIComponent(escape(result));
   } catch (err) {
     console.log(err);
-    return result;
+    return escape(result);
   }
 }
 
@@ -89,49 +91,54 @@ function base16decoder(hexstr) {
   }
 
   escapedResult = encodeURI(decoded).replace(/(%\S{1,2}\d*)/g, '.');
-  return escapedResult;
+  return escape(escapedResult);
 }
 
-base64Button.addEventListener('click', () => {
-  let contents = textarea.value;
-
-  if(box1.innerText.length) {
-    clearAllFields();
+textarea.addEventListener('input', () => {
+  textareaContents = textarea.value;
+  if(!textareaContents && box1 && box2) {
+    box1.innerText = "Nothing to decode...";
+    box2.innerText = "Nothing to decode...";
   }
+});
 
-  if(contents.length) {
-    let content  = textarea.value;
-    box1.innerHTML = b64DecodeUnicode(content);
-    box2.value = b64DecodeUnicode(textarea.value).replace(/[^\x00-\x7F]/g, "");
+base64Button.addEventListener('click', () => {
+  if (textareaContents) {
+    box1.innerHTML = b64DecodeUnicode(textareaContents);
+    box2.innerHTML = b64DecodeUnicode(textareaContents).replace(/[^\x00-\x7F]/g, "");
   } else  {
-    box1.innerText = '';
+    box1.innerText = 'Nothing to decode...';
+    box2.innerText = 'Nothing to decode...';
   }
 });
 
 
 hexButton.addEventListener('click', () => {
-  let contents = textarea.value;
+  console.log(textareaContents)
+  if (textareaContents.length) {
 
-  if (box1.innerHTML.length) {
-    box1.innerText = '';
-    textarea.value = '';
+    box1.innerText = base16decoder(textareaContents);
+    if (box2.textContent.length) {
+      box2.innerText = 'Nothing to decode...';
+    }  
   }
-
-  if (contents.length) {
-    let content = textarea.value;
-    console.log(content)
-    box1.textContent = base16decoder(content);
-  }
-});
-
-container.addEventListener("click", function () {
-  window.getSelection().selectAllChildren(box1);
-
-  try {
-    var successful = document.execCommand('copy');
-    var msg = successful ? 'success' : 'failed';
-    console.log('copy ' + msg);
-  } catch (err) {
-    console.log('Oops, unable to copy');
+  else {
+    box1.innerText = 'Nothing to decode...';
   }
 });
+
+  boxes.addEventListener('click', event => {
+    if (event.target == box1) {
+      window.getSelection().selectAllChildren(box1);
+    }
+    if (event.target == box2) {
+      window.getSelection().selectAllChildren(box2);
+    }
+    try {
+      var copyResult = document.execCommand('copy');
+      var msg = copyResult ? 'success' : 'failed';
+      console.log('copy ' + msg);
+    } catch (err) {
+      console.log('Oops, unable to copy');
+    }
+  });

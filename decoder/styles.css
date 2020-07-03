@@ -19,7 +19,7 @@ textarea {
 .container {
   width: 500px;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 100px;
 }
 
 h1, h3 {
@@ -32,7 +32,7 @@ h1 {
 }
 
 h3 {
-  display: none;
+  display: block;
   font-size: 16px;
 }
 
@@ -60,4 +60,17 @@ h3 {
   cursor: pointer;
   border-color: #2dfcfc;
   color: #2dfcfc;
+}
+
+#box1,
+#box2 {
+  display: block;
+}
+
+#box1 > div,
+#box2 > div{
+  padding: 20px;
+  border: 1px solid #01FF70;
+  min-height: 50px;
+  border-radius: 5px;
 }
