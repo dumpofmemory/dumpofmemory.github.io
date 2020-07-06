@@ -43,15 +43,30 @@ h3 {
   width: 500px;
 }
 
+.buttons {
+  display: flex;
+  width: 500px;
+  padding: 10px 20px;
+}
+
 #base64,
 #hex {
-  display: inline;
+  width: 220px;
+  justify-content: space-around;
   background-color: transparent;
   border: 2px solid #39CCCC;
   color: rgb(204, 57, 167);
   padding: 10px;
   border-radius: 5px;
-  margin: 40px auto 100px auto;
+  margin: 40px auto 10px auto;
+  border-radius: 22px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#base64:hover,
+#hex:hover {
+  cursor: pointer;
 }
 
 #submit:active, #submit:focus {
