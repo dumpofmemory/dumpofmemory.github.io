@@ -17,6 +17,10 @@ textarea {
   width: 500px;
 }
 
+textarea::placeholder {
+  color: #20B2AA;
+}
+
 .container {
   width: 500px;
   margin: 0 auto;
