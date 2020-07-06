@@ -47,6 +47,7 @@ h3 {
   display: flex;
   width: 500px;
   padding: 10px 20px;
+  margin-bottom: 77px;
 }
 
 #base64,
@@ -57,7 +58,7 @@ h3 {
   border: 2px solid #39CCCC;
   color: rgb(204, 57, 167);
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 22px;
   margin: 40px auto 10px auto;
   border-radius: 22px;
   font-size: 16px;
